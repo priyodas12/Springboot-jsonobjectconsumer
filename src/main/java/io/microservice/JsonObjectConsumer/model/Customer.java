@@ -1,5 +1,10 @@
 package io.microservice.JsonObjectConsumer.model;
 
+import org.springframework.stereotype.Component;
+
+import java.util.Arrays;
+
+
 public class Customer {
     private String firstName;
     private String lastName;
@@ -8,6 +13,20 @@ public class Customer {
     private Address address;
     private String [] phoneNumbers;
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                ", phoneNumbers=" + Arrays.toString(phoneNumbers) +
+                '}';
+    }
+    public Customer(){
+
+    }
     public Customer(String firstName, String lastName, String gender, int age, Address address, String[] phoneNumbers) {
         this.firstName = firstName;
         this.lastName = lastName;
