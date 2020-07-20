@@ -39,7 +39,7 @@ public class Address {
         this.postalCode = postalCode;
     }
     public Address() {
-        
+
     }
 
     public Address(String streetAddress, String city, String state, String postalCode) {
